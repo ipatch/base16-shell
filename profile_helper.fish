@@ -10,12 +10,12 @@
 #
 # TODO: maybe port to $HOME/.config/fish/functions ?
 
-
-set SCRIPT_DIR (realpath (dirname (status -f)))
+ set SCRIPT_DIR (realpath (dirname (status -f)))
+# set -gx SCRIPT_DIR ./scripts
 
 # load currently active theme...
 if test -e ~/.base16_theme
-  sh (realpath ~/.base16_theme)
+  sh $XDG_CONFIG_HOME/base16-shell/realpath/realpath.sh ~/.base16_theme
 end
 
 
